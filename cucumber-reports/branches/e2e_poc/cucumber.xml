@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="30.932008">
+<testcase classname="Demo1" name="User is able to Login and confirm data is getting transferred from GCS to BigQuery" time="30.932008">
+<failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;node-version ng-binding&quot; ng-class=&quot;{ 'hidden': DAGPlusPlusCtrl.nodeMenuOpen === node.name}&quot; ng-bind=&quot;node.plugin.artifact.version&quot;&gt;...&lt;/div&gt; is not clickable at point (768, 281). Other element would receive the click: &lt;button class=&quot;btn btn-default ng-scope&quot; ng-click=&quot;DAGPlusPlusCtrl.redoActions()&quot; ng-if=&quot;!DAGPlusPlusCtrl.isDisabled&quot; ng-disabled=&quot;DAGPlusPlusCtrl.redoStates.length === 0&quot; uib-tooltip=&quot;Redo (Ctrl/Cmd + Shift + Z)&quot; tooltip-append-to-body=&quot;true&quot; tooltip-placement=&quot;left&quot; tooltip-popup-delay=&quot;500&quot; data-cy=&quot;pipeline-redo-action-btn&quot; disabled=&quot;disabled&quot;&gt;...&lt;/button&gt;&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-86cb78dfdb-l44xv', ip: '10.116.4.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.120+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [e9f0a94986e721a6c97bd10f355830b4, clickElement {id=ee11eaaa-f01b-4a6d-9633-a2d02c6abc88}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.SwqSFU}, goog:chromeOptions: {debuggerAddress: localhost:43529}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:43529/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (e9f0a94986e721a6c97bd10f355830b4)] -&gt; xpath: //*[@title=&quot;BigQuery&quot;]//following-sibling::div]&#10;Session ID: e9f0a94986e721a6c97bd10f355830b4&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)&#10;&#9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;&#9;at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;&#9;at java.lang.reflect.Method.invoke(Method.java:498)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)&#10;&#9;at com.sun.proxy.$Proxy21.click(Unknown Source)&#10;&#9;at pages.actions.CdfBigQueryPropertiesActions.enterBigQueryProperties(CdfBigQueryPropertiesActions.java:16)&#10;&#9;at stepsDesign.GCSBasicDemo.enterTheBigQueryPropertiesForTable(GCSBasicDemo.java:156)&#10;&#9;at ✽.Enter the BigQuery Properties for table &quot;DemoCheck1&quot;(file:src/test/resources/Test/DemoGcs.feature:11)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS bucket...................................................passed
+When Target is BigQuery.....................................................passed
+Then Link Source and Sink to establish connection...........................passed
+Then Enter the GCS Properties with "@TC-Demo-1_GCS" GCS bucket..............passed
+Then Close the GCS Properties...............................................passed
+Then Enter the BigQuery Properties for table "DemoCheck1"...................failed
+Then Close the BigQuery Properties..........................................skipped
+Then Save and Deploy Pipeline...............................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Open Logs..............................................................skipped
+Then validate successMessage is displayed...................................skipped
+Then Open "BigQuery" link to login..........................................skipped
+Then enter the Query to check the count of table created "DemoCheck1".......skipped
+Then capture the count......................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="node-version ng-binding" ng-class="{ 'hidden': DAGPlusPlusCtrl.nodeMenuOpen === node.name}" ng-bind="node.plugin.artifact.version">...</div> is not clickable at point (768, 281). Other element would receive the click: <button class="btn btn-default ng-scope" ng-click="DAGPlusPlusCtrl.redoActions()" ng-if="!DAGPlusPlusCtrl.isDisabled" ng-disabled="DAGPlusPlusCtrl.redoStates.length === 0" uib-tooltip="Redo (Ctrl/Cmd + Shift + Z)" tooltip-append-to-body="true" tooltip-placement="left" tooltip-popup-delay="500" data-cy="pipeline-redo-action-btn" disabled="disabled">...</button>
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-86cb78dfdb-l44xv', ip: '10.116.4.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.120+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e9f0a94986e721a6c97bd10f355830b4, clickElement {id=ee11eaaa-f01b-4a6d-9633-a2d02c6abc88}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.SwqSFU}, goog:chromeOptions: {debuggerAddress: localhost:43529}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:43529/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (e9f0a94986e721a6c97bd10f355830b4)] -> xpath: //*[@title="BigQuery"]//following-sibling::div]
+Session ID: e9f0a94986e721a6c97bd10f355830b4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy21.click(Unknown Source)
+	at pages.actions.CdfBigQueryPropertiesActions.enterBigQueryProperties(CdfBigQueryPropertiesActions.java:16)
+	at stepsDesign.GCSBasicDemo.enterTheBigQueryPropertiesForTable(GCSBasicDemo.java:156)
+	at ✽.Enter the BigQuery Properties for table "DemoCheck1"(file:src/test/resources/Test/DemoGcs.feature:11)
+]]></failure>
+</testcase>
+</testsuite>
