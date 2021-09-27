@@ -58,7 +58,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 17, 2021 09:43:02 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Sep 27, 2021 11:00:06 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -158,12 +158,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='38.235%'><span class='strong'>13</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='55.882%'><span class='strong'>19</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='2.941%'>1</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='58.824%'>20</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='58.824%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='41.176%'>14</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='41.176%'>0</span> others
                 </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Demo1</span>
-						<span class='test-time'>Sep 17, 2021 09:43:03 PM</span>
+						<span class='test-time'>Sep 27, 2021 11:00:09 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -198,7 +198,7 @@
 	<div class='category-list'>
 		<span class='category label'>@TC-Demo-1</span>
 	</div>
-	<span class='duration right label'>0h 0m 29s+524ms</span>
+	<span class='duration right label'>0h 1m 34s+193ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: User is able to Login and confirm data is getting transferred from GCS to BigQuery</div>
 	</div>
@@ -251,17 +251,41 @@
 			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>AfterActions.tearDown(Scenario)</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='16' class='node then fail' status='fail'>
-			<div class="step-name" title="GCSBasicDemo.enterTheBigQueryPropertiesForTable(String)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Enter the BigQuery Properties for table "DemoCheck1"</div>
-			<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="node-version ng-binding" ng-class="{ 'hidden': DAGPlusPlusCtrl.nodeMenuOpen === node.name}" ng-bind="node.plugin.artifact.version">...</div> is not clickable at point (768, 281). Other element would receive the click: <button class="btn btn-default ng-scope" ng-click="DAGPlusPlusCtrl.redoActions()" ng-if="!DAGPlusPlusCtrl.isDisabled" ng-disabled="DAGPlusPlusCtrl.redoStates.length === 0" uib-tooltip="Redo (Ctrl/Cmd + Shift + Z)" tooltip-append-to-body="true" tooltip-placement="left" tooltip-popup-delay="500" data-cy="pipeline-redo-action-btn" disabled="disabled">...</button>
+		<li test-id='16' class='node then pass' status='pass'>
+			<div class="step-name" title="GCSBasicDemo.enterTheBigQueryPropertiesForTable(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Enter the BigQuery Properties for table "DemoCheck1"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='17' class='node * pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>AfterActions.tearDown(Scenario)</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='18' class='node then pass' status='pass'>
+			<div class="step-name" title="GCSBasicDemo.closeTheBigQueryProperties()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Close the BigQuery Properties</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='19' class='node * pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>AfterActions.tearDown(Scenario)</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='20' class='node then pass' status='pass'>
+			<div class="step-name" title="GCSBasicDemo.saveAndDeployPipeline()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Save and Deploy Pipeline</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='21' class='node * pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>AfterActions.tearDown(Scenario)</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='22' class='node then fail' status='fail'>
+			<div class="step-name" title="GCSBasicDemo.runThePipelineInRuntime()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then Run the Pipeline in Runtime</div>
+			<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class="icon-svg icon-play"]"}
   (Session info: headless chrome=92.0.4515.159)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-86cb78dfdb-l44xv', ip: '10.116.4.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.120+', java.version: '1.8.0_292'
+System info: host: 'runner-deployment-build-data-integrations-e2e-86cb78dfdb-2gmj6', ip: '10.116.11.3', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.120+', java.version: '1.8.0_292'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab8898a49a43bcf77a6e6d5abd1a5c1b, clickElement {id=892204be-bbb2-48aa-a600-b247f3f5f206}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.gQ8x8N}, goog:chromeOptions: {debuggerAddress: localhost:42377}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:42377/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on LINUX (ab8898a49a43bcf77a6e6d5abd1a5c1b)] -> xpath: //*[@title="BigQuery"]//following-sibling::div]
-Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
+Command: [ade4cb1cedf9e5bff00d0325eb3575ba, findElement {using=xpath, value=//*[@class="icon-svg icon-play"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.NHlkei}, goog:chromeOptions: {debuggerAddress: localhost:42267}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:42267/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ade4cb1cedf9e5bff00d0325eb3575ba
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -273,46 +297,21 @@ Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at com.sun.proxy.$Proxy21.click(Unknown Source)
-	at pages.actions.CdfBigQueryPropertiesActions.enterBigQueryProperties(CdfBigQueryPropertiesActions.java:16)
-	at stepsDesign.GCSBasicDemo.enterTheBigQueryPropertiesForTable(GCSBasicDemo.java:156)
-	at ✽.Enter the BigQuery Properties for table "DemoCheck1"(file:src/test/resources/Test/DemoGcs.feature:11)
+	at pages.actions.CdfPipelineRunAction.runClick(CdfPipelineRunAction.java:16)
+	at stepsDesign.GCSBasicDemo.runThePipelineInRuntime(GCSBasicDemo.java:121)
+	at ✽.Run the Pipeline in Runtime(file:src/test/resources/Test/DemoGcs.feature:14)
 </textarea>
 		</li>
-		<li test-id='17' class='node * pass' status='pass'>
+		<li test-id='23' class='node * pass' status='pass'>
 			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>AfterActions.tearDown(Scenario)</div>
 			<div class="node-step"></div>
-		</li>
-		<li test-id='18' class='node then skip' status='skip'>
-			<div class="step-name" title="GCSBasicDemo.closeTheBigQueryProperties()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Close the BigQuery Properties</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='19' class='node * skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>AfterActions.tearDown(Scenario)</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='20' class='node then skip' status='skip'>
-			<div class="step-name" title="GCSBasicDemo.saveAndDeployPipeline()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Save and Deploy Pipeline</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='21' class='node * skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>AfterActions.tearDown(Scenario)</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='22' class='node then skip' status='skip'>
-			<div class="step-name" title="GCSBasicDemo.runThePipelineInRuntime()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Run the Pipeline in Runtime</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='23' class='node * skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>AfterActions.tearDown(Scenario)</div>
-			<div class="node-step">Step skipped</div>
 		</li>
 		<li test-id='24' class='node then skip' status='skip'>
 			<div class="step-name" title="GCSBasicDemo.waitTillPipelineIsInRunningState()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then Wait till pipeline is in running state</div>
@@ -436,7 +435,7 @@ Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 17, 2021 09:43:03 PM</td>
+										<td>Sep 27, 2021 11:00:09 PM</td>
 										<td class='linked' test-id='2'>User is able to Login and confirm data is getting transferred from GCS to BigQuery</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -474,7 +473,7 @@ Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
 			<ul id='exception-collection' class='exception-collection'>
 				<li class='exception displayed active'>
 					<div class='exception-heading'>
-						<span class='exception-name'>org.openqa.selenium.ElementClickInterceptedException</span>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
 						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
 					</div>
 					<div class='exception-content hide'>
@@ -489,18 +488,18 @@ Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 17, 2021 09:43:31 PM</td>
-										<td class='linked' test-id='16'>Then Enter the BigQuery Properties for table "DemoCheck1"</td>
+										<td>Sep 27, 2021 11:00:53 PM</td>
+										<td class='linked' test-id='22'>Then Run the Pipeline in Runtime</td>
 										<td>
-											<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="node-version ng-binding" ng-class="{ 'hidden': DAGPlusPlusCtrl.nodeMenuOpen === node.name}" ng-bind="node.plugin.artifact.version">...</div> is not clickable at point (768, 281). Other element would receive the click: <button class="btn btn-default ng-scope" ng-click="DAGPlusPlusCtrl.redoActions()" ng-if="!DAGPlusPlusCtrl.isDisabled" ng-disabled="DAGPlusPlusCtrl.redoStates.length === 0" uib-tooltip="Redo (Ctrl/Cmd + Shift + Z)" tooltip-append-to-body="true" tooltip-placement="left" tooltip-popup-delay="500" data-cy="pipeline-redo-action-btn" disabled="disabled">...</button>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class="icon-svg icon-play"]"}
   (Session info: headless chrome=92.0.4515.159)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-86cb78dfdb-l44xv', ip: '10.116.4.2', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.120+', java.version: '1.8.0_292'
+System info: host: 'runner-deployment-build-data-integrations-e2e-86cb78dfdb-2gmj6', ip: '10.116.11.3', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.120+', java.version: '1.8.0_292'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ab8898a49a43bcf77a6e6d5abd1a5c1b, clickElement {id=892204be-bbb2-48aa-a600-b247f3f5f206}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.gQ8x8N}, goog:chromeOptions: {debuggerAddress: localhost:42377}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:42377/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on LINUX (ab8898a49a43bcf77a6e6d5abd1a5c1b)] -> xpath: //*[@title="BigQuery"]//following-sibling::div]
-Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
+Command: [ade4cb1cedf9e5bff00d0325eb3575ba, findElement {using=xpath, value=//*[@class="icon-svg icon-play"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.NHlkei}, goog:chromeOptions: {debuggerAddress: localhost:42267}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:42267/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ade4cb1cedf9e5bff00d0325eb3575ba
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -512,17 +511,16 @@ Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
 	at com.sun.proxy.$Proxy21.click(Unknown Source)
-	at pages.actions.CdfBigQueryPropertiesActions.enterBigQueryProperties(CdfBigQueryPropertiesActions.java:16)
-	at stepsDesign.GCSBasicDemo.enterTheBigQueryPropertiesForTable(GCSBasicDemo.java:156)
-	at ✽.Enter the BigQuery Properties for table "DemoCheck1"(file:src/test/resources/Test/DemoGcs.feature:11)
+	at pages.actions.CdfPipelineRunAction.runClick(CdfPipelineRunAction.java:16)
+	at stepsDesign.GCSBasicDemo.runThePipelineInRuntime(GCSBasicDemo.java:121)
+	at ✽.Run the Pipeline in Runtime(file:src/test/resources/Test/DemoGcs.feature:14)
 </textarea>
 										</td>
 									</tr>
@@ -566,19 +564,19 @@ Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 17, 2021 09:43:02 PM</div>
+					<div class='panel-lead'>Sep 27, 2021 11:00:06 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 17, 2021 09:43:33 PM</div>
+			 		<div class='panel-lead'>Sep 27, 2021 11:01:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 30s+965ms</div>
+					<div class='panel-lead'>0h 1m 36s+842ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -632,20 +630,20 @@ Session ID: ab8898a49a43bcf77a6e6d5abd1a5c1b
 				debugChild: 0,
 				exceptionsChild: 1,
 				grandChildCount: 34,
-				passGrandChild: 13,
+				passGrandChild: 19,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 20,
+				skipGrandChild: 14,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 21,
+				exceptionsGrandChild: 15,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Demo1":29.524
+			        "Demo1":94.193
 			};
 		</script>
 	
